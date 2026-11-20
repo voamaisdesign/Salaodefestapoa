@@ -20,6 +20,7 @@
       "description": "Salão de festas e espaço para eventos no bairro Glória em Porto Alegre para até 70 convidados com recepção integral, kit decoração básico gratuito e estrutura completa.",
       "image": "https://voamaisdesign.github.io/Salaodefestapoa/img/logo.png",
       "telephone": "+55-51-98422-3793",
+      "hasMap": "https://share.google/845VUaDMcEXFTSlqr",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Porto Alegre",
@@ -47,16 +48,23 @@
     </script>
 
     <style>
-        /* Garante que o conteúdo do FAQ abra e feche suavemente ao clicar */
+        /* Sobrepõe qualquer regra do style.css para garantir que o FAQ abra sem conflitos */
         .accordion-content {
-            display: none;
-            padding: 15px 18px;
+            display: none !important;
+            max-height: none !important;
+            height: auto !important;
+            opacity: 1 !important;
+            padding: 15px 20px !important;
+            overflow: visible !important;
         }
-        .accordion-item.active .accordion-content {
-            display: block;
+        .accordion-item.aberto .accordion-content {
+            display: block !important;
         }
-        .accordion-item.active .accordion-header i {
+        .accordion-item.aberto .accordion-header i {
             transform: rotate(180deg);
+        }
+        .accordion-header {
+            cursor: pointer;
         }
         .accordion-header i {
             transition: transform 0.25s ease;
@@ -224,8 +232,6 @@
                     </div>
                 </div>
             </div>
-            
-            <p class="galeria-noticia"><i class="fas fa-camera"></i> *As fotos oficiais do espaço serão atualizadas em breve de forma definitiva para o seu lançamento!*</p>
         </div>
     </section>
 
@@ -418,7 +424,7 @@
                 <p>Salão de Festa PoA: estrutura, conforto, atendimento e praticidade para comemorações inesquecíveis.</p>
                 <div class="social-icons">
                     <a href="https://wa.me/5551984223793" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://maps.app.goo.gl/zL58MBcSxpVBY61D7" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="https://share.google/845VUaDMcEXFTSlqr" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
             </div>
             <div>
@@ -431,15 +437,20 @@
                 <h3>Endereço de Destaque</h3>
                 <div class="map-container">
                     <iframe 
-                        src="https://maps.google.com/maps?q=-30.0620317,-51.2030230&hl=pt-BR&z=16&output=embed" 
+                        src="https://maps.google.com/maps?q=Sal%C3%A3o+de+Festa+PoA,+Gl%C3%B3ria,+Porto+Alegre+-+RS&t=&z=16&ie=UTF8&iwloc=B&output=embed" 
                         width="100%" 
                         height="200" 
-                        style="border:0; border-radius:8px;" 
+                        style="border:0; border-radius:8px; display:block;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
+                <p style="margin-top: 8px; font-size: 0.9rem;">
+                    <a href="https://share.google/845VUaDMcEXFTSlqr" target="_blank" style="color: #f2af13; text-decoration: underline;">
+                        <i class="fas fa-external-link-alt"></i> Abrir rota e avaliações no Google Maps
+                    </a>
+                </p>
             </div>
         </div>
         <div class="text-center footer-sub">
@@ -448,11 +459,13 @@
     </footer>
 
     <script>
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                item.classList.toggle('active');
-            });
+        // Controle independente do acordeão para não conflitar com o script.js
+        document.querySelectorAll('.accordion-header').forEach(function(botao) {
+            botao.addEventListener('click', function(evento) {
+                evento.stopImmediatePropagation();
+                var item = this.parentElement;
+                item.classList.toggle('aberto');
+            }, true);
         });
     </script>
     <script src="script.js"></script>
