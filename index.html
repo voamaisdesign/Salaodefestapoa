@@ -20,7 +20,6 @@
       "description": "Salão de festas e espaço para eventos no bairro Glória em Porto Alegre para até 70 convidados com recepção integral, kit decoração básico gratuito e estrutura completa.",
       "image": "https://voamaisdesign.github.io/Salaodefestapoa/img/logo.png",
       "telephone": "+55-51-98422-3793",
-      "email": "salaodefesta.poa@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Porto Alegre",
@@ -46,6 +45,23 @@
       ]
     }
     </script>
+
+    <style>
+        /* Garante que o conteúdo do FAQ abra e feche suavemente ao clicar */
+        .accordion-content {
+            display: none;
+            padding: 15px 18px;
+        }
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+        .accordion-item.active .accordion-header i {
+            transform: rotate(180deg);
+        }
+        .accordion-header i {
+            transition: transform 0.25s ease;
+        }
+    </style>
 </head>
 <body>
 
@@ -128,7 +144,7 @@
         </div>
     </section>
 
-    <!-- Galeria de Fotos (Reserva para carregar as fotos depois) -->
+    <!-- Galeria de Fotos -->
     <section id="galeria" class="galeria section-padding">
         <div class="container text-center">
             <h2>Nosso Espaço em Fotos</h2>
@@ -287,7 +303,7 @@
             
             <div class="grid grid-2 val-flex">
                 <div class="card card-precos">
-                    <h3>Tempo de Atividade: 6 horas</h3>
+                    <h3>6 Horas de Atividade</h3>
                     <p class="nota-prep">Os responsáveis podem chegar antes para trazer bebidas (gelar no duplex) e organizar o espaço de acordo com o combinado.</p>
                     
                     <div class="precos-lista">
@@ -355,37 +371,37 @@
             
             <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-header">Qual a capacidade máxima do Salão de Festa PoA? <i class="fas fa-chevron-down"></i></button>
+                    <button type="button" class="accordion-header">Qual a capacidade máxima do Salão de Festa PoA? <i class="fas fa-chevron-down"></i></button>
                     <div class="accordion-content">
                         <p>O espaço comporta confortavelmente até 70 convidados.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-header">Posso chegar antes para gelar bebidas e arrumar o salão? <i class="fas fa-chevron-down"></i></button>
+                    <button type="button" class="accordion-header">Posso chegar antes para gelar bebidas e arrumar o salão? <i class="fas fa-chevron-down"></i></button>
                     <div class="accordion-content">
                         <p>Sim. Os anfitriões podem acessar o salão antecipadamente para abastecer os dois refrigeradores duplex e organizar a decoração conforme combinado previamente.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-header">O que já vem incluído no salão de festas? <i class="fas fa-chevron-down"></i></button>
+                    <button type="button" class="accordion-header">O que já vem incluído no salão de festas? <i class="fas fa-chevron-down"></i></button>
                     <div class="accordion-content">
                         <p>Vem incluído: mesas, cadeiras, 3 jogos de toalhas, palco para bandas, pebolim, tomadas para celulares, Wi-Fi, churrasqueira, copa completa (geladeiras, micro-ondas, fogão de mesa e pia), isolamento térmico (lajes e ventiladores), banheiros com papel e sabonete, fraldário no banheiro feminino, área de fumantes, estacionamento na frente, recepção integral dos convidados e o nosso kit básico de decoração gratuito.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-header">Como funciona o kit básico de decoração gratuito? <i class="fas fa-chevron-down"></i></button>
+                    <button type="button" class="accordion-header">Como funciona o kit básico de decoração gratuito? <i class="fas fa-chevron-down"></i></button>
                     <div class="accordion-content">
                         <p>É composto por trio de cilindros decorativos, painel redondo (liso ou com Feliz Aniversário), grama sintética na base e cortina de LED piscante. Pode usá-lo como está, adicionar seus balões/adereços ou trazer decoração personalizada por fora.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-header">Como faço para agendar visita e reservar a data? <i class="fas fa-chevron-down"></i></button>
+                    <button type="button" class="accordion-header">Como faço para agendar visita e reservar a data? <i class="fas fa-chevron-down"></i></button>
                     <div class="accordion-content">
                         <p>Agende sua visita pelo WhatsApp (51) 98422-3793. Para garantir a data, solicitamos um pagamento inicial de R$ 200,00 (sinal) no PIX ou débito via link de pagamento. Você pode decidir na sua casa e efetuar a reserva online. O restante do saldo pode ser quitado até o início do evento.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-header">Como funciona a recepção e o suporte? <i class="fas fa-chevron-down"></i></button>
+                    <button type="button" class="accordion-header">Como funciona a recepção e o suporte? <i class="fas fa-chevron-down"></i></button>
                     <div class="accordion-content">
                         <p>Oferecemos o controle de acesso e recepção dos convidados na entrada do início ao fim da festa para sua segurança e conforto. Também há sempre um responsável pelo local em uma área anexa na parte de cima, preservando sua privacidade e pronto para qualquer suporte necessário.</p>
                     </div>
@@ -408,11 +424,37 @@
             <div>
                 <h3>Contato e Localização</h3>
                 <p><i class="fas fa-map-marker-alt text-yellow"></i> Bairro Glória - Porto Alegre, RS</p>
-                <p><i class="fas fa-envelope text-yellow"></i> salaodefesta.poa@gmail.com</p>
                 <p><i class="fab fa-whatsapp text-yellow"></i> (51) 98422-3793</p>
                 <p class="bairros-nota">Atendemos também moradores de bairros próximos como Partenon, Cascata, Teresópolis e Medianeira.</p>
             </div>
             <div>
                 <h3>Endereço de Destaque</h3>
                 <div class="map-container">
-                    <iframe src="
+                    <iframe 
+                        src="https://maps.google.com/maps?q=-30.0620317,-51.2030230&hl=pt-BR&z=16&output=embed" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0; border-radius:8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="text-center footer-sub">
+            <p>&copy; 2026 Salão de Festa PoA. Todos os direitos reservados. Projeto por Voamaisdesign.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
