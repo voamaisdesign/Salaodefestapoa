@@ -60,7 +60,7 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-3s);
+    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(242, 175, 19, 0.4);
 }
 
@@ -308,7 +308,7 @@ body {
     padding: 20px;
     color: var(--text-white);
     text-align: left;
-    transform: translateY(100% - 10px);
+    transform: translateY(calc(100% - 10px));
     transition: var(--transition);
 }
 
